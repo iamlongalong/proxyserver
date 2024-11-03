@@ -9,6 +9,7 @@ socks5 项目 fork 自 https://github.com/armon/go-socks5. 原项目已经多年
 ## 如何使用？
 
 ```bash
+# 安装
 go install github.com/iamlongalong/proxyserver@latest
 
 # 运行
