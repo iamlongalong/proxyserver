@@ -1,0 +1,6 @@
+github.com/caarlos0/env/v6 v6.10.1 h1:t1mPSxNpei6M5yAeu1qtRdPAK29Nbcf/n3G7x+b3/II=
+github.com/caarlos0/env/v6 v6.10.1/go.mod h1:hvp/ryKXKipEkcuYjs9mI4bBCg+UI0Yhgm5Zu0ddvwc=
+github.com/go-httpproxy/httpproxy v0.0.0-20180417134941-6977c68bf38e h1:ZWrG9Qs9xKF9638OVBT9Dd84CduxRWKX1/ZuwDI9e5o=
+github.com/go-httpproxy/httpproxy v0.0.0-20180417134941-6977c68bf38e/go.mod h1:Ftx0ecWwj8tX+5XPIE2KldKlneCsk9xMEaVpNbFRSt4=
+golang.org/x/net v0.30.0 h1:AcW1SDZMkb8IpzCdQUaIq2sP4sZ4zw+55h6ynffypl4=
+golang.org/x/net v0.30.0/go.mod h1:2wGyMJ5iFasEhkwi13ChkO/t1ECNC4X4eBKkVFyYFlU=

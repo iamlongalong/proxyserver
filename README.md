@@ -1,45 +1,39 @@
-go-socks5 [![Build Status](https://travis-ci.org/armon/go-socks5.png)](https://travis-ci.org/armon/go-socks5)
-=========
+## 说明
 
-Provides the `socks5` package that implements a [SOCKS5 server](http://en.wikipedia.org/wiki/SOCKS).
-SOCKS (Secure Sockets) is used to route traffic between a client and server through
-an intermediate proxy layer. This can be used to bypass firewalls or NATs.
+socks5 项目 fork 自 https://github.com/armon/go-socks5，原项目已经多年未更新了，加上想实现支持 server、支持 http proxy 的需求，于是 fork 一份来支持这些需求。
 
-Feature
-=======
+## 有什么功能？
+- 支持 socks5 server
+- 支持 http proxy
 
-The package has the following features:
-* "No Auth" mode
-* User/Password authentication
-* Support for the CONNECT command
-* Rules to do granular filtering of commands
-* Custom DNS resolution
-* Unit tests
+## 如何使用？
 
-TODO
-====
+```bash
+go install github.com/iamlongalong/proxyserver@latest
 
-The package still needs the following:
-* Support for the BIND command
-* Support for the ASSOCIATE command
-
-
-Example
-=======
-
-Below is a simple example of usage
-
-```go
-// Create a SOCKS5 server
-conf := &socks5.Config{}
-server, err := socks5.New(conf)
-if err != nil {
-  panic(err)
-}
-
-// Create SOCKS5 proxy on localhost port 8000
-if err := server.ListenAndServe("tcp", "127.0.0.1:8000"); err != nil {
-  panic(err)
-}
+# 运行
+proxyserver
 ```
 
+参数控制：(环境变量)
+- PROXY_USER: 代理用户名 (默认 空)
+- PROXY_PASSWORD: 代理密码 (默认 空)
+- SOCKS5_PROXY_PORT: socks5 监听端口 (默认 10801)
+- HTTP_PROXY_PORT: http proxy 监听端口 (默认 10802)
+
+例如，可以使用如下:
+```bash
+PROXY_USER=user PROXY_PASSWORD=pass proxyserver
+```
+
+## 客户端
+你可以直接用:
+```bash
+# 使用 http proxy
+export HTTP_PROXY=http://xx.xx.xx.xx:10802; export HTTPS_PROXY=http://xx.xx.xx.xx:10802;
+
+# 使用 socks5 proxy
+export HTTP_PROXY=socks5://xx.xx.xx.xx:10801; export HTTPS_PROXY=socks5://xx.xx.xx.xx:10801;
+```
+
+当然，如果你也直接设置成全局代理。
