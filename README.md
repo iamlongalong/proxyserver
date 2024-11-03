@@ -1,6 +1,6 @@
 ## 说明
 
-socks5 项目 fork 自 https://github.com/armon/go-socks5，原项目已经多年未更新了，加上想实现支持 server、支持 http proxy 的需求，于是 fork 一份来支持这些需求。
+socks5 项目 fork 自 https://github.com/armon/go-socks5. 原项目已经多年未更新了，加上想实现支持 server、支持 http proxy 的需求，于是 fork 一份来支持这些需求。
 
 ## 有什么功能？
 - 支持 socks5 server
