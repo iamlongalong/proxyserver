@@ -8,7 +8,7 @@ import (
 
 	"github.com/caarlos0/env/v6"
 	"github.com/go-httpproxy/httpproxy"
-	"github.com/iamlongalong/go-socks5/socks5"
+	"github.com/iamlongalong/proxyserver/socks5"
 )
 
 type params struct {

@@ -1,4 +1,4 @@
-module github.com/iamlongalong/go-socks5
+module github.com/iamlongalong/proxyserver
 
 go 1.21.1
 
